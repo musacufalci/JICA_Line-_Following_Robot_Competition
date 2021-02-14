@@ -1,26 +1,28 @@
-
+;*******************************************************
 		LIST	P=16F628A
 		INCLUDE	"P16F628A.INC"
 ;		RADIX	HEX
+;*******************************************************
 
-SAYAC1	EQU		h'20'
-SAYAC2	EQU		h'21'
-DEGER	EQU		h'22'
+SAYAC1	EQU	h'20'
+SAYAC2	EQU	h'21'
+DEGER	EQU	h'22'
 
 		CLRF	PORTA
 		CLRF	PORTB
-		BCF		STATUS,RP1
-		BSF		STATUS,RP0		;BANK1
+		BCF	STATUS,RP1
+		BSF	STATUS,RP0		;BANK1
 
 		MOVLW	b'00000'
 		MOVWF	TRISA
 		MOVLW	h'FF'
 		MOVWF	TRISB
-		BCF		STATUS,RP0
+		BCF	STATUS,RP0
 
 		MOVLW	h'07'
 		MOVWF	CMCON
-;___________________________________________________
+		
+;*******************************************************
 
 BASLA		
 
@@ -37,14 +39,15 @@ SOLL
 
 	
 		GOTO	BASLA
-;___________________________________________________
+;*******************************************************
+
 ILERI
 ;		CLRF	PORTA
-		BSF		PORTA,0
-		BCF		PORTA,1
+		BSF	PORTA,0
+		BCF	PORTA,1
 
-		BSF		PORTA,2
-		BCF		PORTA,3
+		BSF	PORTA,2
+		BCF	PORTA,3
 
 		GOTO	BASLA
 
@@ -54,20 +57,20 @@ DUR
 
 SAG	
 		CLRF	PORTA
-		BSF		PORTA,0
-		BCF		PORTA,1
+		BSF	PORTA,0
+		BCF	PORTA,1
 		GOTO	BASLA
 
 SOL
 		CLRF	PORTA
-		BSF		PORTA,2
-		BCF		PORTA,3
+		BSF	PORTA,2
+		BCF	PORTA,3
 		GOTO	BASLA
-;______________NORMAL______________________
+		
+		
+;;******************NORMAL******************************
 
-
-
-;__________________________________________
+;*******************************************************
 
 TIMER
 		MOVLW	h'FF'
