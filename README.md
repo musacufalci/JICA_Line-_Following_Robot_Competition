@@ -1,7 +1,7 @@
 # JICA_Line_Following_Robot_Competition
 
 - Japan International Cooperation Agency (JICA) Line_Following_Robot_Competition
-- Infrared sensor: CNY70
+- Infrared sensor...
 - Processor: PIC series
 - Motor Driver
 - OPAMP
