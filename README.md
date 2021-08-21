@@ -1,4 +1,4 @@
-# JICA_Line_Following_Robot_Competition
+# JICA Line Following Robot Competition
 
 - Japan International Cooperation Agency (JICA) Line_Following_Robot_Competition
 - Infrared sensor...
